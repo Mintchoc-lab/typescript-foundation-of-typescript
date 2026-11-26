@@ -1,5 +1,8 @@
 function processData(data: unknown): string {
-  return data.toUpperCase();
+  if (typeof data === "string"){
+    return data.toLocaleUpperCase()
+  }
+  return "Not a string"
 }
 
 console.log(processData("hello")); // ควรได้ "HELLO"
